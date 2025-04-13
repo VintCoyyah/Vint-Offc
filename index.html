@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinthx07 Offc - Profile</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Overlay yang nutup full -->
+    <div id="overlay">
+        <a id="mainButton" class="button-utama" onclick="playMusic()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            View Me
+        </a>
+    </div>
+
+    <!-- Background utama -->
+    <div class="background"></div>
+
+    <div class="profile-box">
+        <img src="https://i.ibb.co.com/XfzZjPBD/e673aedf7200.jpg" alt="Foto Profil" class="profile-pic">
+        <h1>Vinthx07 Offc</h1>
+        <p>Developer & Bot Creator</p>
+        <p>Halo! Nama saya Kevintcio, pengembang kreatif yang fokus pada pembuatan bot WhatsApp dan website modern.</p>
+        <h2 class="shimmer">ASHURAX INFO</h2>
+        <p id="desk1">Bot WhatsApp otomatis untuk pembelian OTP, suntik media, jual beli akun, dan rekber.</p>
+        
+        <div id="moreText" class="hidden">
+    <p id="desk1">Layanan otomatis untuk berbagai keperluan digital, termasuk pembelian OTP semua negara, suntik media, jual beli akun, dan rekber. Semua proses berjalan otomatis, cepat, dan aman!</p>
+    <p>Dapatkan layanan terbaik dengan sistem yang andal dan terpercaya.</p>
+    </div>
+    <button id="readMoreBtn" onclick="toggleMoreText()">Lihat Selengkapnya</button>
+
+        
+        <div style="text-align: center; margin-top: 20px;">
+  <a href="https://wa.me/6285704107334" target="_blank">
+    <i class="fab fa-whatsapp fa-2x" style="margin: 10px; color: #25D366;"></i>
+  </a>
+  <a href="https://t.me/AshuraxDev" target="_blank">
+    <i class="fab fa-telegram fa-2x" style="margin: 10px; color: #0088cc;"></i>
+  </a>
+  <a href="https://www.instagram.com/kevint._07" target="_blank">
+    <i class="fab fa-instagram fa-2x" style="margin: 10px; color: #C13584;"></i>
+  </a>
+  <a href="https://youtube.com/@vintoffc?si=wOSRfc0clGCZOJBd" target="_blank">
+    <i class="fab fa-youtube fa-2x" style="margin: 10px; color: #FF0000;"></i>
+  </a>
+</div>
+
+        <a href="https://open.spotify.com/user/nf3xjkwb8gsuq2b0t8bimjt58" target="_blank">
+            <img src="spotify.svg" alt="Spotify Now Playing" width="350"/>
+        </a>
+    </div>
+
+    <!-- Audio buat nyetel musik -->
+    <audio id="music" src="Vinth.mp3"></audio>
+    
+    <script>
+function toggleMoreText() {
+    var moreText = document.getElementById("moreText");
+    var btn = document.getElementById("readMoreBtn");
+
+    if (moreText.classList.contains("hidden")) {
+        moreText.classList.remove("hidden");
+        btn.textContent = "Tutup";
+    } else {
+        moreText.classList.add("hidden");
+        btn.textContent = "Lihat Selengkapnya";
+    }
+}
+</script>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("music");
+            var overlay = document.getElementById("overlay");
+
+            audio.play();  // Putar musik
+            overlay.style.display = "none";  // Hilangkan overlay dan button
+        }
+    </script>
+
+</body>
+</html>
